@@ -6,7 +6,18 @@
     <description>Recent content on Welcome to John&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Oct 2021 00:12:28 +0800</lastBuildDate><atom:link href="https://johnliuyq.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Oct 2021 01:29:59 +0800</lastBuildDate><atom:link href="https://johnliuyq.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Some Useful Websites</title>
+      <link>https://johnliuyq.github.io/2021/10/some-useful-websites/</link>
+      <pubDate>Wed, 13 Oct 2021 01:29:59 +0800</pubDate>
+      
+      <guid>https://johnliuyq.github.io/2021/10/some-useful-websites/</guid>
+      <description>Some Useful Websites for coding   SQL lines formatting: www.sqlformat.org
+  JWT token check: www.jwt.io
+  (to be continued&amp;hellip;)</description>
+    </item>
+    
     <item>
       <title>Python下的微信支付开发</title>
       <link>https://johnliuyq.github.io/2021/10/python%E4%B8%8B%E7%9A%84%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%BC%80%E5%8F%91/</link>
