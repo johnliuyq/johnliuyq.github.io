@@ -1,3 +1,10 @@
+
+  
+  
+    
+    
+  
+
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
@@ -17,7 +24,7 @@
   },
   "name":"Welcome to John\u0027s Blog",
   "description":"A blog site for John",
-  "url":"https:\/\/johnliuyq.github.io\/",
+  "url":"https:\/\/johnliuyq.github.io\/categories\/",
   "keywords":"[]"
 }
 
@@ -33,10 +40,10 @@
 
 <meta property="og:description" content="A blog site for John">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Welcome to John&#39;s Blog">
-<meta name="twitter:title" content="Welcome to John&#39;s Blog">
-<meta property="og:url" content="https://johnliuyq.github.io/">
-<meta property="twitter:url" content="https://johnliuyq.github.io/">
+<meta property="og:title" content="Categories">
+<meta name="twitter:title" content="Categories">
+<meta property="og:url" content="https://johnliuyq.github.io/categories/">
+<meta property="twitter:url" content="https://johnliuyq.github.io/categories/">
 <meta property="og:site_name" content="Welcome to John&#39;s Blog">
 <meta property="og:description" content="A blog site for John">
 <meta name="twitter:description" content="A blog site for John">
@@ -59,16 +66,16 @@
 
 
 
-    <title>Welcome to John&#39;s Blog</title>
+    <title>Categories</title>
 
     <link rel="icon" href="https://johnliuyq.github.io/favicon.png">
     
-      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://johnliuyq.github.io/index.xml">
+      <link rel="alternate" type="application/rss+xml" title="RSS" href="https://johnliuyq.github.io/categories/index.xml">
     
 
     
 
-    <link rel="canonical" href="https://johnliuyq.github.io/">
+    <link rel="canonical" href="https://johnliuyq.github.io/categories/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -202,75 +209,27 @@
         class="
                hasCoverMetaIn
                ">
-        <section class="postShorten-group main-content-wrap">
-          
-          
+
+        <div id="categories-archives" class="main-content-wrap">
+          <form id="filter-form" action="##">
+            <input name="category" type="text" class="form-control input--xlarge"
+                   placeholder="Search category" autofocus="autofocus">
+          </form>
+          <h5 class="archive-result text-color-base text-xlarge"
+              data-message-zero="no category found"
+              data-message-one="1 cartegory found"
+              data-message-other="{n} categories found"></h5>
+          <section class="boxes">
             
-  
-    
-      
-        
-      
-    
-  
-
-
-  
-
-<article class="postShorten postShorten--thumbnailimg-bottom">
-  <div class="postShorten-wrap">
-    
-    <div class="postShorten-header">
-      <h1 class="postShorten-title">
-      
-        <a class="link-unstyled" href="https://johnliuyq.github.io/2021/10/python%E4%B8%8B%E7%9A%84%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%BC%80%E5%8F%91/" aria-label="Open the post: Python下的微信支付开发">
-      
-          Python下的微信支付开发
-        </a>
-      </h1>
-      
-  <div class="postShorten-meta post-meta">
-    
-      <time datetime="2021-10-13T00:12:28&#43;08:00">
-        
-  October 13, 2021
-
-      </time>
-    
-    
-  </div>
-
-    </div>
-    <div class="postShorten-excerpt">
-      
-        【原创】：转载请注明出处，谢谢！
-相信大家在微信支付开发过程中，都多多少少遇到过不少的坑，笔者前不久从坑里跳出来，觉得有必要总结和分享一下走过的坑。这是一个系列文章一部分，也是基础概念和流程的介绍。
-基本假设 首先，这里有一些基本的假设，
- 前后端分离的方式开发，你是后端，开发语言为Python； 需要开发微信支付； 你目前需要从小程序调起微信支付以便用户付款； 你需要以JSAPI的方式开发微信支付（其实其他方式开发也是大同小异）。  微信的坑 坑1：微信支付官方资料太过于混乱，以至于可能看了2-3天的资料，仍然没有头绪； 坑2：基本概念解释的既乏味，又没有营养； 坑3：原来各个支付方式中的概念是相通的！ 支付流程 首先介绍一下支付的流程。其实，微信转账很容易完成，不用开发人员，你直接将自己微信的钱转给自己的女朋友，简单的描述如下：
- 从通讯录找到女朋友； 打开聊天窗口，点击&quot;+&ldquo;号； 选择转账； 输入金额，如有需要，添加备注； 确认转账； 完成验证，转账成功。  我们的支付开发也是类似的，但是会有如下的不同点：
- 收款方式：支付是由收款方发起，而非付款方发起，所以一定要在某个契机之下，发送消息给用户，要求收款； 时效性：我们的交易可能不是立刻完成的，所以我们需要将说好的交易先保存在某个地方； 避免干扰不想关用户：我们不能随随便便向所有人都发起收款申请，所以要向微信证明，我们能够找这个用户收款； 收款有据：我们作为企业方（公司），一定是因为提供了服务或者商品，才有资格收款的。通常公司都会是因为有订单，所以要收款； 信任问题：我们不是自己登陆在微信客户端，微信不一定信任我们。我们得证明自己是自己； 安全问题：信息都是在网络传输，被人篡改怎么办，所以得想个办法避免这个问题； 确认收款的方式：最后，作为公司，不可能专门派人去看着每笔款是否到账，只要微信告诉我们到账，我们就认为到账了。  前置知识：
- 微信为了管理所有的小程序，给所有的小程序都分配了一个唯一的号码（appid），同时，为了识别每个小程序下的用户，都会分配一个在该小程序下唯一的用户号（openid）； 前端通常不存储微信发给商户的app key信息（这个注册的时候会有的）。  基于以上的不同点，目前，微信JSAPI支付的流程设计如下：
- 获取用户openid：前后端配合完成。这个openid是用来发起收款申请的，既然能够发起收款申请，也就意味着经过了用户同意了，也就意味着客户有一个授权过程。后面弹出支付要求时，我们也不算干扰不相关用户。这个授权的过程，由于我们目前前后端分离的开发（当然，也因为微信基于安全的设计），进一步分解如下：   a. 获取code：在用户打开小程序时，小程序（前端wx.login来调用）会弹出授权请求，这个时候，用户一旦授权，前端就会收到临时的用户号，即code，此code仅有5分钟的有效时间； b. 获取openid：前端将临时的用户号（code）传给后端，后端调起相关接口，通过自己的app密码（app key）等获取openid等，具体参考如下： 官方openid获取指导  统一下单：后端完成。有了openid，意味着用户授权我们，我们可以&quot;打扰&quot;用户。分头叙述，假如这个时候，用户在小程序看到了好吃的，好产品，或者服务，想占为己有，就会下单，下单时，商户这边会生产一个商户自己的内部订单号，下单后，是否立刻支付，这个就涉及到订单时效性，为了记住订单，以便用户过一会儿付款也不丢失状态，所以，我们找微信下个订单。而这个下单，就是统一下单，为了一一对应，我们将自己的内部订单号给微信。同时，还有一些识别我们身份所需的东西，比如appid，mch_id，app key等等。下面解释一下所必需的东西以及理由：    appid，mch_id：与信任问题相关。这些不用说吧，你得告诉微信你是谁，当然光有这个不行，还要有app key，但是app key就像钥匙，不会直接传输的，这个要到最后sign的时候讲；
-  nonce_str：这个是为了安全，提高安全系数；
-  body：这个与收款有据相关。告诉微信，这个订单你提供了什么服务，相当于备忘，其实我们随便填什么微信都接受，但是为了方便后续查询等，避免麻烦等，最好参照官方规范；
-  out_trade_no：这个与收款有据相关。内部订单号，用来和微信的支付订单一一对应的，在公司内部需要唯一，唯一性的要求很好理解，如果一旦用户支付，微信告诉你订单已经支付，你公司内部有两个一样的订单号指向同一个微信的支付订单的话，你怎么知道到底是哪个订单被支付？当然，具体内部订单号什么规则，这个由你来决定，别超过32位，也不要是奇奇怪怪的字符就行，比如ChiPuTaobutuputaopi，5chiputaoNichipi，这些都可以。
-  total_fee：订单金额，本来没什么说，收钱当然要告诉人家收多少，但是有个坑，记得单位为分，所以自然而然传给微信的是整数，否则后面会报错，“0参数错误”什么的。比如，收100元，传过去的数字要10000。
-      
-      <p>
-        
-          <a href="https://johnliuyq.github.io/2021/10/python%E4%B8%8B%E7%9A%84%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%BC%80%E5%8F%91/" class="postShorten-excerpt_link link" aria-label="Open the post: Python下的微信支付开发">Continue reading</a>
-        
-        
-      </p>
-    </div>
-  </div>
-  
-</article>
-
-          
-          
-
-        </section>
+              
+            
+          </section>
+          <section class="boxes">
+            
+              
+            
+          </section>
+        </div>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
     &copy; 2021 John Liu. All Rights Reserved
@@ -279,7 +238,6 @@
 
       </div>
     </div>
-    
     <div id="about">
   <div id="about-card">
     <div id="about-btn-close">
@@ -310,8 +268,6 @@
 </div>
 
     
-
-    
   
     
       <div id="cover" style="background-image:url('https://johnliuyq.github.io/images/cover.jpg');"></div>
@@ -319,7 +275,8 @@
   
 
 
-    
+  </body>
+  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -386,7 +343,4 @@ $(document).ready(function() {
 
 
 
-    
-  </body>
 </html>
-
