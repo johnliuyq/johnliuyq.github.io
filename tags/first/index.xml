@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>John&#39;s Blog &amp; Notes</title>
-    <link>https://johnliuyq.github.io/</link>
-    <description>Recent content on John&#39;s Blog &amp; Notes</description>
+    <title>first on John&#39;s Blog &amp; Notes</title>
+    <link>https://johnliuyq.github.io/tags/first/</link>
+    <description>Recent content in first on John&#39;s Blog &amp; Notes</description>
     <image>
       <url>https://johnliuyq.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://johnliuyq.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 13 Oct 2021 23:47:13 +0800</lastBuildDate><atom:link href="https://johnliuyq.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Oct 2021 23:47:13 +0800</lastBuildDate><atom:link href="https://johnliuyq.github.io/tags/first/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Python下的微信支付开发</title>
       <link>https://johnliuyq.github.io/python%E4%B8%8B%E7%9A%84%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%BC%80%E5%8F%91/</link>

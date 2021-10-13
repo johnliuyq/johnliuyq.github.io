@@ -2,13 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://johnliuyq.github.io/tags/first/</loc>
+    <lastmod>2021-10-13T23:47:13+08:00</lastmod>
+  </url><url>
+    <loc>https://johnliuyq.github.io/</loc>
+    <lastmod>2021-10-13T23:47:13+08:00</lastmod>
+  </url><url>
     <loc>https://johnliuyq.github.io/python%E4%B8%8B%E7%9A%84%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2021-10-13T23:47:13+08:00</lastmod>
   </url><url>
-    <loc>https://johnliuyq.github.io/categories/</loc>
-  </url><url>
-    <loc>https://johnliuyq.github.io/</loc>
-  </url><url>
     <loc>https://johnliuyq.github.io/tags/</loc>
+    <lastmod>2021-10-13T23:47:13+08:00</lastmod>
+  </url><url>
+    <loc>https://johnliuyq.github.io/page/</loc>
+    <lastmod>2020-09-15T11:30:03+00:00</lastmod>
+  </url><url>
+    <loc>https://johnliuyq.github.io/categories/</loc>
   </url>
 </urlset>
